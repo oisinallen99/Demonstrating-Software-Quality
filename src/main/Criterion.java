@@ -20,7 +20,6 @@ public class Criterion {
             throw new NullPointerException("Name must not be null");
         }
     }
-
     public int getGrade() {
         return grade;
     }
