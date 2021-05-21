@@ -58,4 +58,14 @@ public class RubericTest {
             assertEquals("Criterion must not be null", exception.getMessage());
         }
     }
+
+    @Test
+    public void testGetACriterion(){
+        Criterion criterion1 = new Criterion("Design", 3);
+        Criterion criterion2 = new Criterion("Implementation", 5);
+        criteria.add(criterion1);
+        criteria.add(criterion2);
+        Ruberic myRuberic = new Ruberic("Python", criteria);
+        assertEquals("Design", myRuberic.getACriterion(criteria,"Design").getName());
+    }
 }

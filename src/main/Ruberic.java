@@ -46,4 +46,14 @@ public class Ruberic {
             }
         }
     }
+
+    public Criterion getACriterion(ArrayList<Criterion> myCriteria, String name){
+        Criterion myCriterion = new Criterion("",0);
+        for (int i = 0; i < myCriteria.size(); i++){
+            if (myCriteria.get(i).getName().equalsIgnoreCase(name)){
+                myCriterion = myCriteria.get(i);
+            }
+        }
+        return myCriterion;
+    }
 }
