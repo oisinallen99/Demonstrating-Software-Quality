@@ -42,4 +42,14 @@ public class Student {
                 throw new NullPointerException("Ruberic must not be null");
             }
     }
+
+    public Ruberic getARuberic(String title, ArrayList<Ruberic> ruberics){
+        Ruberic myRuberic = new Ruberic("", new ArrayList<Criterion>());
+        for (int i = 0; i < ruberics.size(); i++){
+            if (ruberics.get(i).getTitle().equalsIgnoreCase(title)){
+                myRuberic = ruberics.get(i);
+            }
+        }
+        return myRuberic;
+    }
 }

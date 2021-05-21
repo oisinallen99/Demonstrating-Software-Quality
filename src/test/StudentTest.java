@@ -60,4 +60,16 @@ public class StudentTest {
             assertEquals("Ruberic must not be null", exception.getMessage());
         }
     }
+
+    @Test
+    public void testGetARubric(){
+        Criterion myCriteria = new Criterion("Design", 0);
+        criteria.add(myCriteria);
+        Ruberic ruberic1 = new Ruberic("Python", criteria);
+        Ruberic ruberic2 = new Ruberic("Java", criteria);
+        ruberics.add(ruberic1);
+        ruberics.add(ruberic2);
+        Student myStudent = new Student("Oisin", ruberics);
+        assertEquals(ruberic1, myStudent.getARuberic("Python",ruberics));
+    }
 }
